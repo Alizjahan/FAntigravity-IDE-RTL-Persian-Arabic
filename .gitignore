@@ -1,0 +1,21 @@
+# VS Code Extension Packages
+*.vsix
+*.zip
+
+# Dependencies & Build artifacts
+node_modules/
+dist/
+out/
+
+# Reference Projects & Temporary Folders
+Myfriend-1_arabic_IDE/
+Myfriend-2_persian_IDE/
+scripts/
+
+# Backup & Logs
+*.bak
+*.log
+
+# OS Metadata
+.DS_Store
+Thumbs.db

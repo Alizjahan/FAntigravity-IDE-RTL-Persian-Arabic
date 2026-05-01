@@ -1,0 +1,165 @@
+{
+  "name": "fantigravity-ide",
+  "displayName": "FAntigravity IDE RTL (Persian & Arabic)",
+  "description": "Official Intelligent Persian & Arabic RTL & Typography Engine for AI Agent Chat in Antigravity IDE",
+  "version": "1.0.0",
+  "publisher": "Aliz",
+  "author": {
+    "name": "Aliz",
+    "email": "alizjahanbakhsh@gmail.com",
+    "url": "https://github.com/Alizjahan"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic.git"
+  },
+  "homepage": "https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic",
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#0d1117",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Formatters",
+    "Themes",
+    "Other"
+  ],
+  "keywords": [
+    "persian",
+    "rtl",
+    "antigravity",
+    "chat",
+    "vazirmatn",
+    "farsi",
+    "typography",
+    "arabic"
+  ],
+  "type": "module",
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:fantigravity.chatSettingsView"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "fantigravity-panel",
+          "title": "FAntigravity RTL",
+          "icon": "assets/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "fantigravity-panel": [
+        {
+          "type": "webview",
+          "id": "fantigravity.chatSettingsView",
+          "name": ""
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "fantigravity.chat.openPanel",
+        "title": "Open FAntigravity Settings Panel",
+        "category": "FAntigravity IDE"
+      },
+      {
+        "command": "fantigravity.chat.toggle",
+        "title": "Toggle Persian RTL for AI Chat",
+        "category": "FAntigravity IDE"
+      },
+      {
+        "command": "fantigravity.chat.enable",
+        "title": "Enable Persian RTL for AI Chat",
+        "category": "FAntigravity IDE"
+      },
+      {
+        "command": "fantigravity.chat.disable",
+        "title": "Disable Persian RTL for AI Chat",
+        "category": "FAntigravity IDE"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "fantigravity.chat.insertAtSymbol",
+        "key": "shift+2",
+        "when": "chatInputHasFocus && config.fantigravity.chat.fixPersianAt"
+      }
+    ],
+    "configuration": {
+      "title": "FAntigravity IDE",
+      "properties": {
+        "fantigravity.chat.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable Persian Right-to-Left (RTL) formatting and custom typography for the AI Chat box."
+        },
+        "fantigravity.chat.theme": {
+          "type": "string",
+          "enum": [
+            "antigravity",
+            "dark",
+            "light"
+          ],
+          "default": "antigravity",
+          "description": "Panel color theme (antigravity, dark, light)."
+        },
+        "fantigravity.chat.fontFamily": {
+          "type": "string",
+          "enum": [
+            "Vazirmatn",
+            "Snapp",
+            "System Default",
+            "Custom..."
+          ],
+          "default": "Vazirmatn",
+          "description": "Select the primary Persian font used in the AI Chat box."
+        },
+        "fantigravity.chat.customFontFamily": {
+          "type": "string",
+          "default": "",
+          "description": "Custom font family name to use when 'Custom...' is selected (e.g. 'IRANSans', 'B Nazanin')."
+        },
+        "fantigravity.chat.fontSize": {
+          "type": "number",
+          "default": 0,
+          "description": "Font size in pixels for AI Chat messages (set 0 to inherit default theme size)."
+        },
+        "fantigravity.chat.lineHeight": {
+          "type": "number",
+          "default": 1.75,
+          "description": "Line height ratio for Persian reading comfort in AI Chat (recommended: 1.7 - 1.85)."
+        },
+        "fantigravity.chat.forceRTL": {
+          "type": "boolean",
+          "default": false,
+          "description": "Force all messages to Right-to-Left (RTL) mode even if starting with English characters."
+        },
+        "fantigravity.chat.enFontFamily": {
+          "type": "string",
+          "default": "",
+          "description": "Font family for English words in chat (empty for system default)."
+        },
+        "fantigravity.chat.codeFontFamily": {
+          "type": "string",
+          "default": "",
+          "description": "Monospace font family for code blocks in chat (empty for system default)."
+        },
+        "fantigravity.chat.fixPersianAt": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically insert @ symbol when pressing Shift+2 in Persian layout inside the Chat input."
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0"
+  }
+}

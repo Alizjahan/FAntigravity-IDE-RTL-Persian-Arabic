@@ -1,0 +1,11 @@
+.git/**
+.vscode/**
+node_modules/**
+src/**/*.map
+*.log
+.DS_Store
+*.vsix
+copilot-rtl-main.zip
+Myfriend-1_arabic_IDE/**
+Myfriend-2_persian_IDE/**
+Logo_high.png
