@@ -116,7 +116,7 @@ Press `Ctrl + Shift + P` (or `Cmd + Shift + P`) to access:
 
 ## Author & Maintainer
 
-Developed by **Alireza Jahanbakhsh (Aliz)**
+Developed with ❤️ by **Aliz ([@Alizjahan](https://github.com/Alizjahan))**
 - GitHub: [@Alizjahan](https://github.com/Alizjahan)
 - Telegram: [@Alizjahan](https://t.me/Alizjahan)
 

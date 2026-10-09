@@ -93,7 +93,7 @@
 
 ## 👨‍💻 توسعه‌دهنده
 
-توسعه‌یافته توسط **علیرضا جهانبخش (Aliz)**
+توسعه‌یافته توسط **Aliz ([@Alizjahan](https://github.com/Alizjahan))**
 - گیت‌هاب: [https://github.com/Alizjahan](https://github.com/Alizjahan)
 - تلگرام: [https://t.me/Alizjahan](https://t.me/Alizjahan)
 
