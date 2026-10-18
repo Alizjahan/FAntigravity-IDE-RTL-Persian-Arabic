@@ -7,7 +7,7 @@
 # FAntigravity IDE RTL (Persian & Arabic)
 ### Intelligent Persian & Arabic RTL Typography Engine for AI Agent Chat in Antigravity IDE and VS Code
 
-[![Release](https://img.shields.io/badge/Release-v1.0.2-0D9DF8?style=flat-square&logo=github)](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic)
+[![Release](https://img.shields.io/badge/Release-v1.0.3-0D9DF8?style=flat-square&logo=github)](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic)
 [![License](https://img.shields.io/badge/License-MIT-34C6BF?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Marketplace](https://img.shields.io/badge/Open%20VSX-Available-blue?style=flat-square)](https://open-vsx.org/)
 [![Author](https://img.shields.io/badge/Maintainer-Aliz-0F6FFA?style=flat-square)](https://github.com/Alizjahan)
@@ -15,6 +15,18 @@
 Read and write smoothly in Persian and Arabic inside your AI Chat without affecting code editors, file trees, or terminals.
 
 [English Documentation](#overview) | [راهنمای فارسی](./README_FA.md) | [الدليل العربي](./README_AR.md)
+
+</div>
+
+---
+
+<div align="center">
+
+### 📸 Tri-Lingual Settings Panel (Fa / Ar / En)
+
+| فارسی (Persian) | العربية (Arabic) | English |
+| :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_fa.png" alt="FAntigravity IDE Persian UI" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_ar.png" alt="FAntigravity IDE Arabic UI" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_en.png" alt="FAntigravity IDE English UI" width="100%" /> |
 
 </div>
 

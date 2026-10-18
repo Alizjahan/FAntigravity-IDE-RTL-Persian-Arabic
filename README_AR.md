@@ -2,6 +2,20 @@
 
 إضافة **FAntigravity IDE** هي الأداة الرسمية لتفعيل المحاذاة الذكية من اليمين إلى اليسار (RTL) وضبط الخطوط العربية والفارسية بدقة فائقة، **حصرياً وداخل صندوق محادثة الذكاء الاصطناعي (AI Chat)** في بيئة **Antigravity IDE** ومحررات كود المبنية على VS Code.
 
+[English Documentation](./README.md) | [راهنمای فارسی](./README_FA.md) | [الدليل العربي](./README_AR.md)
+
+---
+
+<div align="center">
+
+### 📸 لوحة التحكم ثلاثية اللغات (عربي | فارسي | إنجليزي)
+
+| الواجهة العربية | الواجهة الفارسية | الواجهة الإنجليزية |
+| :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_ar.png" alt="واجهة عربية FAntigravity IDE" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_fa.png" alt="واجهة فارسية FAntigravity IDE" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_en.png" alt="واجهة إنجليزية FAntigravity IDE" width="100%" /> |
+
+</div>
+
 ---
 
 ### 🎯 عزل تام لصندوق المحادثة (Chat Focus) وميزات تكميلية

@@ -2,6 +2,11 @@
 
 All notable changes to the "FAntigravity IDE" extension will be documented in this file.
 
+## [1.0.3] - 2026-10-19
+
+### Documentation & Assets
+- **Tri-Lingual UI Showcase**: Added matched-resolution screenshots of the settings panel in Persian, Arabic, and English to README documentation across Open VSX and GitHub.
+
 ## [1.0.2] - 2026-10-19
 
 ### Fixed & Improved

@@ -6,6 +6,18 @@
 
 ---
 
+<div align="center">
+
+### 📸 نمای پنل تنظیمات ۳ زبانه (فارسی | عربی | انگلیسی)
+
+| پنل فارسی | پنل عربی | پنل انگلیسی |
+| :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_fa.png" alt="پنل فارسی FAntigravity IDE" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_ar.png" alt="پنل عربی FAntigravity IDE" width="100%" /> | <img src="https://raw.githubusercontent.com/Alizjahan/FAntigravity-IDE-RTL-Persian-Arabic/main/assets/preview_en.png" alt="پنل انگلیسی FAntigravity IDE" width="100%" /> |
+
+</div>
+
+---
+
 ## 🎯 تمرکز تخصصی بر باکس چت (Chat Focus) و امکانات مکمل
 
 یکی از مشکلات بزرگ پچ‌های سراسری، تغییر ناخواسته فونت ادیتور کد، تب‌ها یا ترمینال است. افزونه FAntigravity IDE منحصراً بر بهینه‌سازی تجربه گفتگو با ایجنت هوش مصنوعی متمرکز است و در عین حال امکانات شخصی‌سازی فونت کدها را نیز فراهم می‌آورد:
