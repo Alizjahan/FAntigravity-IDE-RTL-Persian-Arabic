@@ -576,6 +576,9 @@ export function getSidebarHtml(webview, extensionUri, config) {
                 fs: 'اندازه قلم:',
                 apply: 'اعمال تغییرات و بارگذاری مجدد (Reload)',
                 footer: 'توسعه داده شده با ❤️ توسط Aliz',
+                themeAntigravity: 'تم آنتی‌گرویتی (Antigravity)',
+                themeDark: 'تم تاریک (Dark)',
+                themeLight: 'تم روشن (Light)',
                 dir: 'rtl'
             },
             ar: {
@@ -600,6 +603,9 @@ export function getSidebarHtml(webview, extensionUri, config) {
                 fs: 'حجم الخط:',
                 apply: 'تطبيق التغييرات وإعادة التحميل (Reload)',
                 footer: 'تم التطوير بـ ❤️ بواسطة Aliz',
+                themeAntigravity: 'سمة أنتي غرافيتي (Antigravity)',
+                themeDark: 'السمة الداكنة (Dark)',
+                themeLight: 'السمة الفاتحة (Light)',
                 dir: 'rtl'
             },
             en: {
@@ -624,6 +630,9 @@ export function getSidebarHtml(webview, extensionUri, config) {
                 fs: 'Font Size:',
                 apply: 'Apply & Reload Window',
                 footer: 'Developed with ❤️ by Aliz',
+                themeAntigravity: 'Antigravity Theme',
+                themeDark: 'Dark Theme',
+                themeLight: 'Light Theme',
                 dir: 'ltr'
             }
         };
@@ -710,6 +719,9 @@ export function getSidebarHtml(webview, extensionUri, config) {
 
             // Toggle badge
             badgeToggle.textContent = chkToggle.checked ? t.on : t.off;
+
+            // Update Theme button icon and tooltip
+            updateThemeUI(themes[currentThemeIdx]);
         }
 
         langBtn.addEventListener('click', () => {
@@ -722,10 +734,44 @@ export function getSidebarHtml(webview, extensionUri, config) {
             ? themes.indexOf(document.body.getAttribute('data-theme'))
             : 0;
 
+        const themeIcons = {
+            antigravity: '<svg viewBox="0 0 24 24" width="13" height="13" fill="url(#themeStarGrad)" stroke="#34C6BF" stroke-width="1.2">' +
+                '<defs>' +
+                    '<linearGradient id="themeStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">' +
+                        '<stop offset="0%" stop-color="#0F6FFA"/>' +
+                        '<stop offset="35%" stop-color="#0D9DF8"/>' +
+                        '<stop offset="70%" stop-color="#34C6BF"/>' +
+                        '<stop offset="92%" stop-color="#89DB76"/>' +
+                        '<stop offset="100%" stop-color="#FA9138"/>' +
+                    '</linearGradient>' +
+                '</defs>' +
+                '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>' +
+            '</svg>',
+            dark: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+                '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>' +
+            '</svg>',
+            light: '<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+                '<circle cx="12" cy="12" r="5"/>' +
+                '<path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>' +
+            '</svg>'
+        };
+
+        function updateThemeUI(themeId) {
+            btnTheme.innerHTML = themeIcons[themeId] || themeIcons.antigravity;
+            const t = I18N[currentLang] || I18N.fa;
+            const titleMap = {
+                antigravity: t.themeAntigravity,
+                dark: t.themeDark,
+                light: t.themeLight
+            };
+            btnTheme.title = titleMap[themeId] || t.themeAntigravity;
+        }
+
         btnTheme.addEventListener('click', () => {
             currentThemeIdx = (currentThemeIdx + 1) % themes.length;
             const newTheme = themes[currentThemeIdx];
             document.body.setAttribute('data-theme', newTheme);
+            updateThemeUI(newTheme);
             sendUpdate(false);
         });
 

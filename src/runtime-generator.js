@@ -47,7 +47,8 @@ export function generateRuntimeJs(config = {}) {
     function isRtlText(text) {
         if (!text) return false;
         var clean = text.replace(/[\\u200B-\\u200F\\uFEFF\\s]/g, '');
-        return ARABIC_PERSIAN_RE.test(clean);
+        var textWithoutMath = clean.replace(/\\$[^\\$]+\\$/g, '');
+        return ARABIC_PERSIAN_RE.test(textWithoutMath);
     }
 
     function buildDynamicCss(cfg) {
@@ -123,9 +124,9 @@ export function generateRuntimeJs(config = {}) {
 
         var forceRtlRules = cfg.forceRTL ? (
             "html.fantigravity-on [data-testid=\\"user-input-step\\"],\\n" +
-            "html.fantigravity-on [data-testid=\\"user-input-step\\"] *:not(pre):not(code):not(.monaco-editor),\\n" +
-            "html.fantigravity-on [data-testid=\\"conversation-view\\"] p,\\n" +
-            "html.fantigravity-on [data-testid=\\"conversation-view\\"] li,\\n" +
+            "html.fantigravity-on [data-testid=\\"user-input-step\\"] *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),\\n" +
+            "html.fantigravity-on [data-testid=\\"conversation-view\\"] p:not(.katex):not(.katex-display),\\n" +
+            "html.fantigravity-on [data-testid=\\"conversation-view\\"] li:not(.katex):not(.katex-display),\\n" +
             "html.fantigravity-on [data-testid=\\"conversation-view\\"] h1,\\n" +
             "html.fantigravity-on [data-testid=\\"conversation-view\\"] h2,\\n" +
             "html.fantigravity-on [data-testid=\\"conversation-view\\"] h3,\\n" +
@@ -134,18 +135,18 @@ export function generateRuntimeJs(config = {}) {
             "html.fantigravity-on [data-testid=\\"conversation-view\\"] h6,\\n" +
             "html.fantigravity-on [data-testid=\\"conversation-view\\"] blockquote,\\n" +
             "html.fantigravity-on [data-testid=\\"conversation-view\\"] .whitespace-pre-wrap,\\n" +
-            "html.fantigravity-on .leading-relaxed p,\\n" +
-            "html.fantigravity-on .leading-relaxed li,\\n" +
+            "html.fantigravity-on .leading-relaxed p:not(.katex):not(.katex-display),\\n" +
+            "html.fantigravity-on .leading-relaxed li:not(.katex):not(.katex-display),\\n" +
             "html.fantigravity-on .leading-relaxed h1,\\n" +
             "html.fantigravity-on .leading-relaxed h2,\\n" +
             "html.fantigravity-on .leading-relaxed h3,\\n" +
             "html.fantigravity-on .animate-markdown,\\n" +
-            "html.fantigravity-on .markdown-root p,\\n" +
-            "html.fantigravity-on .markdown-root li,\\n" +
-            "html.fantigravity-on .chat-container p,\\n" +
-            "html.fantigravity-on .chat-container li,\\n" +
-            "html.fantigravity-on.fantigravity-standalone body p,\\n" +
-            "html.fantigravity-on.fantigravity-standalone body li,\\n" +
+            "html.fantigravity-on .markdown-root p:not(.katex):not(.katex-display),\\n" +
+            "html.fantigravity-on .markdown-root li:not(.katex):not(.katex-display),\\n" +
+            "html.fantigravity-on .chat-container p:not(.katex):not(.katex-display),\\n" +
+            "html.fantigravity-on .chat-container li:not(.katex):not(.katex-display),\\n" +
+            "html.fantigravity-on.fantigravity-standalone body p:not(.katex):not(.katex-display),\\n" +
+            "html.fantigravity-on.fantigravity-standalone body li:not(.katex):not(.katex-display),\\n" +
             "html.fantigravity-on.fantigravity-standalone body h1,\\n" +
             "html.fantigravity-on.fantigravity-standalone body h2 {\\n" +
             "    direction: rtl !important;\\n" +
@@ -162,22 +163,22 @@ export function generateRuntimeJs(config = {}) {
             "    --fantigravity-chat-font-size: " + fs + " !important;\\n" +
             "}\\n\\n" +
             "html.fantigravity-on [data-testid=\\"user-input-step\\"],\\n" +
-            "html.fantigravity-on [data-testid=\\"user-input-step\\"] *:not(pre):not(code):not(.monaco-editor),\\n" +
+            "html.fantigravity-on [data-testid=\\"user-input-step\\"] *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),\\n" +
             "html.fantigravity-on [data-testid=\\"conversation-view\\"],\\n" +
-            "html.fantigravity-on [data-testid=\\"conversation-view\\"] *:not(pre):not(code):not(.monaco-editor),\\n" +
+            "html.fantigravity-on [data-testid=\\"conversation-view\\"] *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),\\n" +
             "html.fantigravity-on .leading-relaxed,\\n" +
-            "html.fantigravity-on .leading-relaxed *:not(pre):not(code):not(.monaco-editor),\\n" +
+            "html.fantigravity-on .leading-relaxed *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),\\n" +
             "html.fantigravity-on .animate-markdown,\\n" +
-            "html.fantigravity-on .animate-markdown *:not(pre):not(code):not(.monaco-editor),\\n" +
+            "html.fantigravity-on .animate-markdown *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),\\n" +
             "html.fantigravity-on .markdown-root,\\n" +
-            "html.fantigravity-on .markdown-root *:not(pre):not(code):not(.monaco-editor),\\n" +
+            "html.fantigravity-on .markdown-root *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),\\n" +
             "html.fantigravity-on .chat-container,\\n" +
-            "html.fantigravity-on .chat-container *:not(pre):not(code):not(.monaco-editor),\\n" +
+            "html.fantigravity-on .chat-container *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),\\n" +
             "html.fantigravity-on.fantigravity-standalone body,\\n" +
-            "html.fantigravity-on.fantigravity-standalone body *:not(pre):not(code):not(.monaco-editor),\\n" +
+            "html.fantigravity-on.fantigravity-standalone body *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),\\n" +
             "html.fantigravity-on [data-lexical-editor=\\"true\\"],\\n" +
             "html.fantigravity-on [contenteditable=\\"true\\"],\\n" +
-            "html.fantigravity-on [contenteditable=\\"true\\"] *,\\n" +
+            "html.fantigravity-on [contenteditable=\\"true\\"] *:not(.katex):not(.katex *),\\n" +
             "html.fantigravity-on [data-lexical-text=\\"true\\"],\\n" +
             "html.fantigravity-on textarea,\\n" +
             "html.fantigravity-on .agent_input_box {\\n" +
@@ -204,6 +205,33 @@ export function generateRuntimeJs(config = {}) {
             "    unicode-bidi: isolate !important;\\n" +
             "    font-family: var(--fantigravity-code-font) !important;\\n" +
             "}\\n\\n" +
+            "/* Strict Math & Formula Protection (KaTeX, MathML, MathJax) */\\n" +
+            "html.fantigravity-on .katex,\\n" +
+            "html.fantigravity-on .katex-html,\\n" +
+            "html.fantigravity-on .katex-display,\\n" +
+            "html.fantigravity-on .katex-display *,\\n" +
+            "html.fantigravity-on math,\\n" +
+            "html.fantigravity-on math *,\\n" +
+            "html.fantigravity-on mjx-container,\\n" +
+            "html.fantigravity-on mjx-container *,\\n" +
+            "html.fantigravity-on .MathJax,\\n" +
+            "html.fantigravity-on .MathJax *,\\n" +
+            "html.fantigravity-on .katex * {\\n" +
+            "    direction: ltr !important;\\n" +
+            "    text-align: left !important;\\n" +
+            "    unicode-bidi: isolate !important;\\n" +
+            "    font-family: KaTeX_Main, KaTeX_Math, KaTeX_Size1, KaTeX_Size2, KaTeX_Size3, KaTeX_Size4, KaTeX_AMS, KaTeX_Caligraphic, KaTeX_Fraktur, KaTeX_SansSerif, KaTeX_Script, KaTeX_Typewriter, 'Times New Roman', serif !important;\\n" +
+            "    line-height: normal !important;\\n" +
+            "}\\n\\n" +
+            "html.fantigravity-on .katex,\\n" +
+            "html.fantigravity-on .katex-html {\\n" +
+            "    display: inline-block !important;\\n" +
+            "}\\n\\n" +
+            "html.fantigravity-on .katex-display {\\n" +
+            "    display: block !important;\\n" +
+            "    text-align: center !important;\\n" +
+            "    margin: 0.75em 0 !important;\\n" +
+            "}\\n\\n" +
             forceRtlRules;
     }
 
@@ -223,7 +251,7 @@ export function generateRuntimeJs(config = {}) {
         if (tag === 'PRE' || tag === 'CODE') return;
         if (el.closest('pre') || el.closest('code') || el.closest('.monaco-editor') || el.closest('[class*="font-mono"]')) return;
         if (tag === 'BUTTON' || el.closest('button') || el.closest('[role="button"]') || el.closest('svg') || el.closest('.codicon')) return;
-        if (el.classList.contains('katex') || el.closest('.katex')) return;
+        if (el.classList.contains('katex') || el.classList.contains('katex-display') || el.classList.contains('katex-html') || el.closest('.katex, .katex-display, math, mjx-container, .MathJax')) return;
 
         var text = el.textContent || '';
         var hasRtl = isRtlText(text);
@@ -240,11 +268,13 @@ export function generateRuntimeJs(config = {}) {
             }
 
             // Math inside RTL block must remain strictly LTR
-            var mathEls = el.querySelectorAll('.katex, .katex-html');
+            var mathEls = el.querySelectorAll('.katex, .katex-html, .katex-display, math, mjx-container, .MathJax');
             for (var m = 0; m < mathEls.length; m++) {
-                mathEls[m].style.setProperty('direction', 'ltr', 'important');
-                mathEls[m].style.setProperty('text-align', 'left', 'important');
-                mathEls[m].style.setProperty('unicode-bidi', 'isolate', 'important');
+                var mEl = mathEls[m];
+                mEl.setAttribute('dir', 'ltr');
+                mEl.style.setProperty('direction', 'ltr', 'important');
+                mEl.style.setProperty('text-align', mEl.classList.contains('katex-display') ? 'center' : 'left', 'important');
+                mEl.style.setProperty('unicode-bidi', 'isolate', 'important');
             }
         } else {
             el.style.setProperty('direction', 'ltr', 'important');
@@ -256,6 +286,16 @@ export function generateRuntimeJs(config = {}) {
 
     function scanAll() {
         if (!_enabled) return;
+
+        // Isolate and protect all math and formula blocks
+        var mathElements = document.querySelectorAll('.katex, .katex-html, .katex-display, math, mjx-container, .MathJax');
+        for (var m = 0; m < mathElements.length; m++) {
+            var mEl = mathElements[m];
+            mEl.setAttribute('dir', 'ltr');
+            mEl.style.setProperty('direction', 'ltr', 'important');
+            mEl.style.setProperty('text-align', mEl.classList.contains('katex-display') ? 'center' : 'left', 'important');
+            mEl.style.setProperty('unicode-bidi', 'isolate', 'important');
+        }
 
         // Headings (H1..H6) above boxes and inside chat
         var headings = document.querySelectorAll(

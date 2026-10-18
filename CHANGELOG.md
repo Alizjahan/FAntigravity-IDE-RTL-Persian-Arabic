@@ -2,6 +2,21 @@
 
 All notable changes to the "FAntigravity IDE" extension will be documented in this file.
 
+## [1.0.2] - 2026-10-19
+
+### Fixed & Improved
+- **Math & LaTeX Isolation**: Full protection for KaTeX, MathML, and MathJax formulas. Mathematical formulas now strictly preserve original LTR direction, standard math fonts, and isolated bidi boundaries.
+- **Theme Switcher Icons**: Added dynamic SVG icons for all 3 themes in the sidebar settings panel: Moon (Dark), Sun (Light), and Rainbow Star (Antigravity), along with translated tooltips.
+- **Code Block Typography**: Enhanced code font family customization for code blocks and snippets in chat responses.
+- **BiDi Heuristics**: Stripped inline LaTeX math before evaluating text direction to prevent formulas from triggering unintended RTL switches.
+
+## [1.0.1] - 2026-10-09
+
+### Added
+- **Tri-lingual UI**: Added 3-Language switcher (Persian, Arabic, English) in the settings sidebar with one-click toggling.
+- **Dubai Font**: Embedded modern Dubai font offline for Persian and Arabic reading.
+- **Real-Time Live-Sync**: Live synchronization bridge for instant styling updates without reloading.
+
 ## [1.0.0] - 2026-10-09
 
 ### Initial Release

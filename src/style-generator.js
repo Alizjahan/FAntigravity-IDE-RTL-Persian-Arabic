@@ -114,19 +114,19 @@ ${extraFontFaces}
 
 /* 1. Base typography for Agent Chat */
 html.fantigravity-on [data-testid="user-input-step"],
-html.fantigravity-on [data-testid="user-input-step"] *:not(pre):not(code):not(.monaco-editor),
+html.fantigravity-on [data-testid="user-input-step"] *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
 html.fantigravity-on [data-testid="conversation-view"],
-html.fantigravity-on [data-testid="conversation-view"] *:not(pre):not(code):not(.monaco-editor),
+html.fantigravity-on [data-testid="conversation-view"] *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
 html.fantigravity-on .leading-relaxed,
-html.fantigravity-on .leading-relaxed *:not(pre):not(code):not(.monaco-editor),
+html.fantigravity-on .leading-relaxed *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
 html.fantigravity-on .animate-markdown,
-html.fantigravity-on .animate-markdown *:not(pre):not(code):not(.monaco-editor),
+html.fantigravity-on .animate-markdown *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
 html.fantigravity-on .markdown-root,
-html.fantigravity-on .markdown-root *:not(pre):not(code):not(.monaco-editor),
+html.fantigravity-on .markdown-root *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
 html.fantigravity-on .chat-container,
-html.fantigravity-on .chat-container *:not(pre):not(code):not(.monaco-editor),
+html.fantigravity-on .chat-container *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
 html.fantigravity-on.fantigravity-standalone body,
-html.fantigravity-on.fantigravity-standalone body *:not(pre):not(code):not(.monaco-editor) {
+html.fantigravity-on.fantigravity-standalone body *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *) {
     font-family: var(--fantigravity-chat-font) !important;
 }
 
@@ -192,9 +192,9 @@ html.fantigravity-on [data-fantigravity-dir="ltr"] {
 ${forceRTL ? `
 /* Force RTL mode */
 html.fantigravity-on [data-testid="user-input-step"],
-html.fantigravity-on [data-testid="user-input-step"] *:not(pre):not(code):not(.monaco-editor),
-html.fantigravity-on [data-testid="conversation-view"] p,
-html.fantigravity-on [data-testid="conversation-view"] li,
+html.fantigravity-on [data-testid="user-input-step"] *:not(pre):not(code):not(.monaco-editor):not(.katex):not(.katex *):not(.katex-display):not(.katex-display *):not(math):not(math *):not(mjx-container):not(mjx-container *):not(.MathJax):not(.MathJax *),
+html.fantigravity-on [data-testid="conversation-view"] p:not(.katex):not(.katex-display),
+html.fantigravity-on [data-testid="conversation-view"] li:not(.katex):not(.katex-display),
 html.fantigravity-on [data-testid="conversation-view"] blockquote,
 html.fantigravity-on [data-testid="conversation-view"] h1,
 html.fantigravity-on [data-testid="conversation-view"] h2,
@@ -203,18 +203,18 @@ html.fantigravity-on [data-testid="conversation-view"] h4,
 html.fantigravity-on [data-testid="conversation-view"] h5,
 html.fantigravity-on [data-testid="conversation-view"] h6,
 html.fantigravity-on [data-testid="conversation-view"] .whitespace-pre-wrap,
-html.fantigravity-on .leading-relaxed p,
-html.fantigravity-on .leading-relaxed li,
+html.fantigravity-on .leading-relaxed p:not(.katex):not(.katex-display),
+html.fantigravity-on .leading-relaxed li:not(.katex):not(.katex-display),
 html.fantigravity-on .leading-relaxed h1,
 html.fantigravity-on .leading-relaxed h2,
 html.fantigravity-on .leading-relaxed h3,
 html.fantigravity-on .animate-markdown,
-html.fantigravity-on .markdown-root p,
-html.fantigravity-on .markdown-root li,
-html.fantigravity-on .chat-container p,
-html.fantigravity-on .chat-container li,
-html.fantigravity-on.fantigravity-standalone body p,
-html.fantigravity-on.fantigravity-standalone body li,
+html.fantigravity-on .markdown-root p:not(.katex):not(.katex-display),
+html.fantigravity-on .markdown-root li:not(.katex):not(.katex-display),
+html.fantigravity-on .chat-container p:not(.katex):not(.katex-display),
+html.fantigravity-on .chat-container li:not(.katex):not(.katex-display),
+html.fantigravity-on.fantigravity-standalone body p:not(.katex):not(.katex-display),
+html.fantigravity-on.fantigravity-standalone body li:not(.katex):not(.katex-display),
 html.fantigravity-on.fantigravity-standalone body h1,
 html.fantigravity-on.fantigravity-standalone body h2 {
     direction: rtl !important;
@@ -282,12 +282,34 @@ html.fantigravity-on :not(pre) > code {
     padding: 0.1em 0.35em !important;
 }
 
-/* Math blocks stay strictly LTR */
+/* Math & formula protection (KaTeX, MathML, MathJax) */
 html.fantigravity-on .katex,
-html.fantigravity-on .katex-html {
+html.fantigravity-on .katex-html,
+html.fantigravity-on .katex-display,
+html.fantigravity-on .katex-display *,
+html.fantigravity-on math,
+html.fantigravity-on math *,
+html.fantigravity-on mjx-container,
+html.fantigravity-on mjx-container *,
+html.fantigravity-on .MathJax,
+html.fantigravity-on .MathJax *,
+html.fantigravity-on .katex * {
     direction: ltr !important;
     text-align: left !important;
     unicode-bidi: isolate !important;
+    font-family: KaTeX_Main, KaTeX_Math, KaTeX_Size1, KaTeX_Size2, KaTeX_Size3, KaTeX_Size4, KaTeX_AMS, KaTeX_Caligraphic, KaTeX_Fraktur, KaTeX_SansSerif, KaTeX_Script, KaTeX_Typewriter, "Times New Roman", serif !important;
+    line-height: normal !important;
+}
+
+html.fantigravity-on .katex,
+html.fantigravity-on .katex-html {
+    display: inline-block !important;
+}
+
+html.fantigravity-on .katex-display {
+    display: block !important;
+    text-align: center !important;
+    margin: 0.75em 0 !important;
 }
 
 /* Buttons, icons, chevrons, step badges */

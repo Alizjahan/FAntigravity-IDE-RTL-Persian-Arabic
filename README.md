@@ -7,7 +7,7 @@
 # FAntigravity IDE RTL (Persian & Arabic)
 ### Intelligent Persian & Arabic RTL Typography Engine for AI Agent Chat in Antigravity IDE and VS Code
 
-[![Release](https://img.shields.io/badge/Release-v1.0.0-0D9DF8?style=flat-square&logo=github)](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic)
+[![Release](https://img.shields.io/badge/Release-v1.0.2-0D9DF8?style=flat-square&logo=github)](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic)
 [![License](https://img.shields.io/badge/License-MIT-34C6BF?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Marketplace](https://img.shields.io/badge/Open%20VSX-Available-blue?style=flat-square)](https://open-vsx.org/)
 [![Author](https://img.shields.io/badge/Maintainer-Aliz-0F6FFA?style=flat-square)](https://github.com/Alizjahan)
@@ -22,9 +22,9 @@ Read and write smoothly in Persian and Arabic inside your AI Chat without affect
 
 ## Overview
 
-**FAntigravity IDE** is an official extension developed specifically for **Antigravity IDE** (and VS Code-based environments) to bring fluent right-to-left (RTL) reading, writing, and custom Persian and Arabic typography exclusively to the **AI Chat panel**.
+**FAntigravity IDE** is an extension developed specifically for **Antigravity IDE** (and VS Code-based environments) to bring fluent right-to-left (RTL) reading, writing, and custom Persian and Arabic typography exclusively to the **AI Chat panel**, while also providing convenient code block font customization.
 
-Unlike global RTL patches that interfere with editor tabs, code buffers, or terminal lines, FAntigravity IDE is engineered with surgical CSS precision: it isolates chat discussions and prompt textboxes while ensuring that all code blocks, diff views, and editor panes remain strictly Left-to-Right (LTR).
+Unlike global RTL patches that interfere with editor tabs, code buffers, or terminal lines, FAntigravity IDE is engineered with surgical CSS precision: it isolates chat discussions and prompt textboxes while ensuring that all code blocks, diff views, mathematical formulas, and editor panes remain strictly Left-to-Right (LTR).
 
 ---
 
@@ -37,7 +37,9 @@ Unlike global RTL patches that interfere with editor tabs, code buffers, or term
   - **Vazirmatn Variable**: High-fidelity Persian font embedded in WOFF2 format. Zero network requests, 100% offline.
   - **System Fonts**: Instant support for locally installed fonts (IRANSans, Sahel, Shabnam, Cairo, Amiri, Tahoma, etc.).
 - **Isolated English Font via Unicode Range**: Customize English typography with dedicated `unicode-range` without disrupting Persian or Arabic characters.
-- **Code Block Monospace Customizer**: Tailor the font family of code snippets and fenced code blocks independently.
+- **Code Block Monospace Customizer**: Tailor the font family of code snippets and fenced code blocks independently (e.g. Fira Code, JetBrains Mono, Consolas).
+- **Mathematical Formula Isolation (KaTeX / MathML / MathJax)**: Complex math formulas and LaTeX equations are fully shielded from Persian font overrides and RTL flipping, staying purely LTR and properly styled.
+- **Dynamic Theme Switcher**: 3-theme switcher in the panel header with animated SVG icons: Moon 🌙 (Dark), Sun ☀️ (Light), and Rainbow Star 🌟 (Antigravity).
 - **Forced RTL Mode (راست‌چین اجباری)**: Ensure all messages flow RTL even if they start with English characters or technical tokens.
 - **Tri-lingual Sidebar UI (FA / AR / EN)**: Interactive settings manager right in the Activity Bar with seamless one-click language toggle.
 - **Code Block Preservation**: Fenced code blocks (`pre`, `code`), Monaco interactive result cells, and copy action buttons inside chat messages stay locked in LTR with monospace typography.
@@ -55,6 +57,7 @@ Unlike global RTL patches that interfere with editor tabs, code buffers, or term
 | AI Chat Prompt Input (Textarea / Widget) | Auto RTL / LTR | Dubai / Vazirmatn / System / Custom |
 | English Words in Chat | LTR Glyphs | Custom English Font (Isolated Unicode Range) |
 | Chat Code Blocks (`pre`, `code`) | Strict LTR | Custom Code Font / Editor Monospace |
+| Math Formulas (KaTeX / MathML / MathJax) | Strict LTR (Isolated) | Standard KaTeX / MathML Fonts |
 | Chat Action Buttons & Pills | Strict LTR | Theme Default |
 | Main Code Editor & Tabs | Unaffected (LTR) | User Editor Font |
 | Integrated Terminal | Unaffected (LTR) | Terminal Monospace |
