@@ -2,6 +2,11 @@
 
 All notable changes to the "FAntigravity IDE" extension will be documented in this file.
 
+## [1.0.4] - 2026-10-22
+
+### Documentation
+- **Official App/IDE Distinction Notice**: Added clear, formal notice in READMEs directing standalone desktop application users to the dedicated [FAntigravity-App-RTL-Persian-Arabic](https://github.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic) repository.
+
 ## [1.0.3] - 2026-10-19
 
 ### Documentation & Assets

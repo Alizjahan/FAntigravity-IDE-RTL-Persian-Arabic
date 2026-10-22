@@ -6,6 +6,14 @@
 
 ---
 
+> [!NOTE]
+> **اطلاعیه رسمی در خصوص نسخه‌های برنامه:**  
+> این افزونه منحصراً برای محیط **Antigravity IDE** توسعه داده شده است.  
+> برای نرم‌افزار مستقل دسکتاپ (**Antigravity Standalone App**) اکستنشن و پچ دیگری نوشته‌ام که می‌توانید به ریپازیتوری آن مراجعه فرمایید:  
+> 🔗 [**FAntigravity-App-RTL-Persian-Arabic**](https://github.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic)
+
+---
+
 <div align="center">
 
 ### 📸 نمای پنل تنظیمات ۳ زبانه (فارسی | عربی | انگلیسی)
@@ -72,7 +80,7 @@
 ۳. روی دکمه **Install** کلیک کرده و سپس پنجره را Reload نمایید.
 
 ### روش دوم: نصب آفلاین از طریق بسته VSIX
-۱. فایل `fantigravity-ide-1.0.2.vsix` را تهیه کنید.
+۱. فایل `fantigravity-ide-1.0.4.vsix` را تهیه کنید.
 ۲. در بخش Extensions منوی سه نقطه بالا را باز کرده و گزینه **Install from VSIX...** را انتخاب نمایید.
 ۳. پس از اتمام نصب، پنجره را Reload نمایید.
 

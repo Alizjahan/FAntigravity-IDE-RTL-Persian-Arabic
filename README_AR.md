@@ -6,6 +6,14 @@
 
 ---
 
+> [!NOTE]
+> **ملاحظة رسمية حول إصدار البرنامج:**  
+> هذه الإضافة مخصصة حصرياً لبيئة **Antigravity IDE**.  
+> إذا كنت تستخدم تطبيق سطح المكتب المستقل (**Antigravity Standalone App**)، فقد قمت بكتابة أداة وإضافة مخصصة لذلك الإصدار؛ يرجى زيارة المستودع عبر الرابط التالي:  
+> 🔗 [**FAntigravity-App-RTL-Persian-Arabic**](https://github.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic)
+
+---
+
 <div align="center">
 
 ### 📸 لوحة التحكم ثلاثية اللغات (عربي | فارسي | إنجليزي)
@@ -73,7 +81,7 @@
 3. اضغط على **Install** ثم أعد تشغيل النافذة (Reload Window).
 
 ### الطريقة الثانية: التثبيت اليدوي عبر ملف VSIX
-1. حمّل ملف الحزمة `fantigravity-ide-1.0.2.vsix`.
+1. حمّل ملف الحزمة `fantigravity-ide-1.0.4.vsix`.
 2. من قائمة الإضافات (Extensions)، اضغط على القائمة (···) في الأعلى واختر **Install from VSIX...**.
 3. حدد الملف ثم أعد تشغيل النافذة بعد اكتمال التثبيت.
 

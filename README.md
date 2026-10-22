@@ -7,7 +7,7 @@
 # FAntigravity IDE RTL (Persian & Arabic)
 ### Intelligent Persian & Arabic RTL Typography Engine for AI Agent Chat in Antigravity IDE and VS Code
 
-[![Release](https://img.shields.io/badge/Release-v1.0.3-0D9DF8?style=flat-square&logo=github)](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic)
+[![Release](https://img.shields.io/badge/Release-v1.0.4-0D9DF8?style=flat-square&logo=github)](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic)
 [![License](https://img.shields.io/badge/License-MIT-34C6BF?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Marketplace](https://img.shields.io/badge/Open%20VSX-Available-blue?style=flat-square)](https://open-vsx.org/)
 [![Author](https://img.shields.io/badge/Maintainer-Aliz-0F6FFA?style=flat-square)](https://github.com/Alizjahan)
@@ -17,6 +17,14 @@ Read and write smoothly in Persian and Arabic inside your AI Chat without affect
 [English Documentation](#overview) | [راهنمای فارسی](./README_FA.md) | [الدليل العربي](./README_AR.md)
 
 </div>
+
+---
+
+> [!NOTE]
+> **Important Note on Editions:**  
+> This extension is specifically developed for the **Antigravity IDE** environment.  
+> If you are using the standalone desktop edition (**Antigravity Standalone App**), a dedicated extension and injector has been developed for it. Please visit:  
+> 🔗 [**FAntigravity-App-RTL-Persian-Arabic**](https://github.com/Alizjahan/FAntigravity-App-RTL-Persian-Arabic)
 
 ---
 
@@ -85,7 +93,7 @@ Unlike global RTL patches that interfere with editor tabs, code buffers, or term
 3. Click **Install**, then reload the window.
 
 ### Method 2: Offline VSIX Package
-1. Download `fantigravity-ide-1.0.0.vsix` from the [Releases](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic/releases) section.
+1. Download `fantigravity-ide-1.0.4.vsix` from the [Releases](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic/releases) section.
 2. In the Extensions view, click the `···` menu at the top-right and select **Install from VSIX...**.
 3. Select the file and reload the IDE.
 
