@@ -10,7 +10,7 @@
 [![Release](https://img.shields.io/badge/Release-v1.0.4-0D9DF8?style=flat-square&logo=github)](https://github.com/Alizjahan/FAntigravity-IDE-RTL-Persian-arabic)
 [![License](https://img.shields.io/badge/License-MIT-34C6BF?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Marketplace](https://img.shields.io/badge/Open%20VSX-Available-blue?style=flat-square)](https://open-vsx.org/)
-[![Author](https://img.shields.io/badge/Maintainer-Aliz-0F6FFA?style=flat-square)](https://github.com/Alizjahan)
+[![Maintainer](https://img.shields.io/badge/Maintainer-Alizjahan-0F6FFA?style=flat-square&logo=github)](https://github.com/Alizjahan)
 
 Read and write smoothly in Persian and Arabic inside your AI Chat without affecting code editors, file trees, or terminals.
 
@@ -137,7 +137,7 @@ Press `Ctrl + Shift + P` (or `Cmd + Shift + P`) to access:
 
 ---
 
-## Author & Maintainer
+## 👨‍💻 Author & Maintainer
 
 Developed with ❤️ by **Aliz ([@Alizjahan](https://github.com/Alizjahan))**
 - GitHub: [@Alizjahan](https://github.com/Alizjahan)
@@ -145,6 +145,6 @@ Developed with ❤️ by **Aliz ([@Alizjahan](https://github.com/Alizjahan))**
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
